@@ -61,5 +61,6 @@ account1.deposit(200).deposit(500).deposit(50).withdraw(899).yield_interest().di
 
 account2.deposit(100).deposit(350).withdraw(200).withdraw(100).withdraw(20).withdraw(300).yield_interest().display_account_info()
 # print(account2.balance)
+print("*****************************")
 
 BankAccount.print_all_instances()
