@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -6,11 +6,9 @@ app = Flask(__name__)
 def test():
     return "hello"
 
-@app.route('/play')
+@app.route('/play/')
 def play():
-    current_path = request.url_rule.rule
-    print(current_path)
-    return render_template("index.html", current_path = current_path)
+    return render_template("index.html")
 
 @app.route("/play/<int:x>")
 def draw_boxes(x):
