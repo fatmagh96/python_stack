@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        .container {
+            margin: 80px auto;
+            width: 900px;
+        }
+
+        h1 {
+            color: maroon;
+            /* margin-left: 40px; */
+        }
+        .boxes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* min-height: 900px; */
+        }
+        .box {
+            border: 2px solid black;
+            background-color: rgb(49, 68, 177);
+            width: 250px;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; margin-bottom: 50px;">Welcome!</h1>
+        <div class="boxes">
+            <p>{{current_path}}</p>
+            <!-- {% if current_path == "play" %}
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            {% endif %} -->
+
+            <!-- {% for i in range(x):%}
+                <div class="box" style="background-color: {{color}};"></div>
+            {% endfor %} -->
+
+        </div>
+
+    </div>
+</body>
+
+</html>
