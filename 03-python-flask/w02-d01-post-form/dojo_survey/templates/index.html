@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <title>POST-FORM</title>
+</head>
+
+<body>
+    <div class="container w-60 m-auto p-3 border border-black mt-5">
+        <h1 class="mb-5">POST-FORM </h1>
+        <form action="/process" method="post">
+            <div class="row mb-3">
+                <label for="" class="col-sm-2 col-form-label">Your Name: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="username">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="" class="col-sm-2 col-form-label">Dojo Location: </label>
+                <div class="col-sm-10">
+                    <select name="dojo_location" id="" class="form-control">
+                        <option value="">-----Choose Location-----</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="San Jose">San Jose</option>
+                        <option value="Paris">Paris</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="" class="col-sm-2 col-form-label">Favorite Language: </label>
+                <div class="col-sm-10">
+                    <select name="fav_language" id="" class="form-control">
+                        <option value="">-----Choose Language-----</option>
+                        <option value="Python">Python</option>
+                        <option value="C++">C++</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3 d-block">
+                <label for="" class="col-sm-2 col-form-label">Comment: </label>
+                <div class="">
+                    <textarea name="comment" id="" class="form-control" cols="70"></textarea>
+                </div>
+            </div>
+            <p>Prefered Language:</p>
+            <div class=" d-flex gap-5 mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="English" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        English
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="French" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        French
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="Arabic" id="flexRadioDefault3">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Arabic
+                    </label>
+                </div>
+            </div>
+            <p>Do you agree with the terms and conditions ?</p>
+            <div class=" d-flex gap-5 mb-5">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flexcheckboxDefault" value="yes" id="flexcheckboxDefault" checked>
+                    <label class="form-check-label" for="flexcheckboxDefault">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flexcheckboxDefault" value="no" id="flexcheckboxDefault">
+                    <label class="form-check-label" for="flexcheckboxDefault">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
