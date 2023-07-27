@@ -1,0 +1,34 @@
+SELECT * from dojos;
+SELECT * from ninjas;
+
+INSERT INTO dojos (name) VALUES ('Tokyo'),('Kyoto'),
+('Osaka');
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dojos; 
+SET SQL_SAFE_UPDATES = 1;
+
+INSERT INTO dojos (name) VALUES ('katakana'),('hiragana'),
+('kanji');
+
+INSERT INTO ninjas (dojo_id, first_name, last_name, age)
+VALUES (4, 'Sasha', 'Braus', 20),
+	   (4, 'Frida', 'Reiss', 29),
+       (4, 'Annie', 'Leonhart', 25);
+       
+INSERT INTO ninjas (dojo_id, first_name, last_name, age)
+VALUES (5, 'Zeke', 'Jaeger', 37),
+	   (5, 'Levi', 'Ackermann', 33),
+       (5, 'Reiner', 'Braun', 27);
+       
+INSERT INTO ninjas (dojo_id, first_name, last_name, age)
+VALUES (6, 'Rintarou', 'Okabe', 32),
+	   (6, 'Kurisu', 'Makise', 31),
+       (6, 'Mayuri', 'Shiina', 17);
+       
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+SELECT * FROM dojos WHERE id =
+(SELECT dojo_id FROM ninjas WHERE
+  id = (SELECT MAX(id) FROM ninjas));

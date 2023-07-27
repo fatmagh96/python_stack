@@ -1,0 +1,11 @@
+SELECT * FROM names ;
+
+INSERT INTO names (name) VALUES('Fatma');
+
+INSERT INTO names (name) VALUES ('Saitama'), ('Yukko'),
+ ('Kira') , ('Betty');
+ 
+INSERT INTO names (name) VALUES ('Sonic');
+UPDATE names SET name = 'Genos' WHERE id = 6;
+ 
+DELETE FROM names WHERE id = 6;
