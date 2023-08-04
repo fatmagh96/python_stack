@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>New Ninja</title>
+</head>
+<body>
+    <div class="container mb-4">
+        <h1>New Ninja</h1>
+        <div class="card p-2 mb-3">
+            <form action="/ninjas/create" method="post" class="">
+                <div class="form-group mb-3">
+                    <label for=""  ><h5>Dojo:</h5></label>
+                    <select name="dojo_id" class="form-select">
+                        {% for dojo in dojos %}
+                            <option class="" value="{{dojo.id}}">{{dojo.name}}</option>
+                        {%endfor%}
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for=""  class=""><h5>First Name:</h5></label>
+                    <input type="text" name="first_name" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for=""  class=""><h5>Last Name:</h5></label>
+                    <input type="text" name="last_name" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for=""  class=""><h5>Age:</h5></label>
+                    <input type="text" name="age" class="form-control">
+                </div>
+                <input type="submit" value="Create" class="btn btn-success mt-3">
+            </form>
+        </div>
+        <a href="/" class="btn btn-primary">Home</a>
+    </div>
+</body>
+</html>
