@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class=" align-content-center w-50 m-auto p-3 border border-black bg-success h5">
+            The email address you entered ({{one_user.email}}) is valid!!!
+        </div>
+
+        <div class="mt-4">
+            <h5>Email addresses entered:</h5>
+            <table class="table">
+                <tbody>
+                    {%for user in users%}
+                    <tr>
+                        <td>{{user.email}}</td>
+                        <td>{{user.created_at}}</td>
+                        <td>
+                            <form action="/destroy/{{user.id}}" method="post">
+                                <input type="submit" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <a href="/home">Home</a>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
